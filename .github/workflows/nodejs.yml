@@ -1,4 +1,4 @@
-name: Node.js CI
+name: 🚀 My Custom Node.js Workflow
 
 on:
   push:
@@ -8,15 +8,20 @@ on:
 
 jobs:
   build:
+    name: 🛠 Build and Test
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: 🔧 Set up Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - run: npm install
+      - name: 📦 Install dependencies
+        run: npm install
 
-      - run: npm test
+      - name: 🧪 iniyavan tests
+        run: npm test
