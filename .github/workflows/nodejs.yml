@@ -19,6 +19,13 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Print current directory
+        run: pwd
+
+      - name: List project files
+        run: ls -la
+        working-directory: demoproject
+
       - name: Install dependencies
         run: npm install
         working-directory: demoproject
